@@ -4,8 +4,9 @@
 from PIL import Image
 import numpy as np
 
+
 # Import Picture of Ellie
-myPic = Image.open("/Users/Brian/Apple_Dev/Machine Vision/Ellie.jpg")
+myPic = Image.open("Ellie.jpg")
 myPic.convert('RGB')
 # Display Image
 #myPic.show()
@@ -18,7 +19,6 @@ rArray = np.array(r)
 gArray = np.array(g)
 bArray = np.array(b)
 w, h = rArray.shape
-
 
 #Create zero Array
 Zer = np.zeros((w,h,1), dtype=np.uint8)
@@ -37,3 +37,7 @@ blueImage.save("Ellie_Blue.jpg")
 
 greenImage = Image.fromarray(greenImageArr,'RGB')
 greenImage.save("Ellie_Green.jpg")
+
+
+
+
