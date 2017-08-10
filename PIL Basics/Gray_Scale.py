@@ -45,7 +45,7 @@ myPic = Image.open("Ellie.jpg")
 myPic.convert('RGB')
 r,g,b = myPic.split()
 
-Create Grey Scale Image without any Contrast Correction
+#Create Grey Scale Image without any Contrast Correction
 grayArray = greyScale(r,g,b,0)
 grayImageArr = np.dstack([grayArray,grayArray,grayArray])
 grayImage = Image.fromarray(grayImageArr,'RGB')
@@ -55,4 +55,4 @@ grayImage.save("Ellie_Gray.jpg")
 grayAdjArray = greyScale(r,g,b,128);
 grayImageAdjArr = np.dstack([grayAdjArray,grayAdjArray,grayAdjArray])
 grayImageAdj = Image.fromarray(grayImageAdjArr,'RGB')
-grayImageAdj.save("Ellie_Gray_Constrast_Adj.jpg")
+grayImageAdj.save("Ellie_Gray_Contrast_Adj.jpg")
